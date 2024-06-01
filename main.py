@@ -1,7 +1,6 @@
 #Imports
 from roblox import Client
 from discord.ext import commands
-from discord import app_commands
 from dotenv import find_dotenv, load_dotenv
 from ast import literal_eval
 
