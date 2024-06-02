@@ -3,6 +3,8 @@ from roblox import Client
 from discord.ext import commands
 from dotenv import find_dotenv, load_dotenv
 from ast import literal_eval
+from keep_alive import keep_alive
+keep_alive()
 
 import rblxopencloud
 import os
