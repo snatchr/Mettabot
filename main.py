@@ -82,6 +82,48 @@ async def getstats(ctx, id):
      await ctx.send(embed=embed)
     else:
      await ctx.send("Failed.")
+@getstats.error
+async def getstats_error(ctx, error):
+   if isinstance(error, commands.BadArgument):
+      embed=discord.Embed(color=0x090707)
+      embed.add_field(name="Error: Bad Argument", value="Exception raised when a parsing or conversion failure is encountered on an argument to pass into a command.", inline=False)
+      await ctx.send(embed=embed)
+   elif isinstance(error, commands.MissingRequiredArgument):
+      embed=discord.Embed(color=0x090707)
+      embed.add_field(name="Error: Missing Required Argument", value="Exception raised when parsing a command and a parameter that is required is not encountered.", inline=False)
+      await ctx.send(embed=embed)
+   elif isinstance(error, commands.TooManyArguments):
+      embed=discord.Embed(color=0x090707)
+      embed.add_field(name="Error: Too many arguments", value="Exception raised when the command was passed too many arguments and its Command.ignore_extra attribute was not set to True.", inline=False)
+      await ctx.send(embed=embed)
+@getspecificstat.error
+async def getspecificstat_error(ctx, error):
+   if isinstance(error, commands.BadArgument):
+      embed=discord.Embed(color=0x090707)
+      embed.add_field(name="Error: Bad Argument", value="Exception raised when a parsing or conversion failure is encountered on an argument to pass into a command.", inline=False)
+      await ctx.send(embed=embed)
+   elif isinstance(error, commands.MissingRequiredArgument):
+      embed=discord.Embed(color=0x090707)
+      embed.add_field(name="Error: Missing Required Argument", value="Exception raised when parsing a command and a parameter that is required is not encountered.", inline=False)
+      await ctx.send(embed=embed)
+   elif isinstance(error, commands.TooManyArguments):
+      embed=discord.Embed(color=0x090707)
+      embed.add_field(name="Error: Too many arguments", value="Exception raised when the command was passed too many arguments and its Command.ignore_extra attribute was not set to True.", inline=False)
+      await ctx.send(embed=embed)
+@whois.error
+async def whois_error(ctx, error):
+   if isinstance(error, commands.BadArgument):
+      embed=discord.Embed(color=0x090707)
+      embed.add_field(name="Error: Bad Argument", value="Exception raised when a parsing or conversion failure is encountered on an argument to pass into a command.", inline=False)
+      await ctx.send(embed=embed)
+   elif isinstance(error, commands.MissingRequiredArgument):
+      embed=discord.Embed(color=0x090707)
+      embed.add_field(name="Error: Missing Required Argument", value="Exception raised when parsing a command and a parameter that is required is not encountered.", inline=False)
+      await ctx.send(embed=embed)
+   elif isinstance(error, commands.TooManyArguments):
+      embed=discord.Embed(color=0x090707)
+      embed.add_field(name="Error: Too many arguments", value="Exception raised when the command was passed too many arguments and its Command.ignore_extra attribute was not set to True.", inline=False)
+      await ctx.send(embed=embed)
        
 #Running
 bot.run(token)
