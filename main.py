@@ -1,6 +1,7 @@
 #Imports
 from roblox import Client
 from discord.ext import commands
+from discord import app_commands
 from dotenv import find_dotenv, load_dotenv
 from ast import literal_eval
 from keep_alive import keep_alive
@@ -9,6 +10,7 @@ keep_alive()
 import rblxopencloud
 import os
 import discord
+import storage
 #Setting up some stuff
 
 envpath = find_dotenv()
@@ -22,6 +24,11 @@ roblox = Client()
 @bot.event
 async def on_ready():
     print("Logged in as " + bot.user.name)
+    try:
+      synced = await bot.tree.sync()
+      print(f"Synced {len(synced)} command(s)")
+    except Exception as e:
+       print(f"Error syncing commands: {e}")
 #Commands
 @bot.command()
 async def hello(ctx):
@@ -82,6 +89,9 @@ async def getstats(ctx, id):
      await ctx.send(embed=embed)
     else:
      await ctx.send("Failed.")
+@bot.tree.command(name="SlashCommandTest")
+async def test(interaction: discord.Interaction):
+   await interaction.response.send_message("hi squidward")
 @getstats.error
 async def getstats_error(ctx, error):
    if isinstance(error, commands.BadArgument):
