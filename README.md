@@ -6,4 +6,4 @@ If you haven't noticed yet, the bot is coded in python.
 
 The bot can currently only interact with undertale reseted datastores, however i am in the process of changing that.
 
-Mettabot will always stay open source. I'm kind of new to github and just coding in general, so if you want to give me any suggestions dm me on snatch6129
+Mettabot will always stay open source. I'm kind of new to github and just coding in general, so if you want to give me any suggestions dm me on snatch6129.
