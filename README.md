@@ -5,3 +5,5 @@ Bot is hosted through discloud and uses ro.py, discord.py and rblxopencloud.
 If you haven't noticed yet, the bot is coded in python.
 
 The bot can currently only interact with undertale reseted datastores, however i am in the process of changing that.
+
+Mettabot will always stay open source.
