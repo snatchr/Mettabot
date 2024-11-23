@@ -91,7 +91,7 @@ async def getstats(ctx, id):
      await ctx.send("Failed.")
 @bot.tree.command(name="slashcommandtest")
 async def test(interaction: discord.Interaction):
-   await interaction.response.send_message("test to see if i can edit zz")
+   await interaction.response.send_message("hi squidward")
 
 #@bot.tree.command(name="getuserid", description="Gets the roblox user ID of a discord user.")
 #@app_commands.describe(user='The discord user.')
