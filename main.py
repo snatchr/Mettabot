@@ -42,7 +42,7 @@ async def whois(ctx, username):
      joindate = user.created.date()
      isbanned = user.is_banned
      description = user.description
-     hasplayedutr = bool(user.get_badge_awarded_dates([2127151760]))
+     hasplayedutr = await bool(user.get_badge_awarded_dates([2127151760]))
      followers = await user.get_follower_count()
      embed=discord.Embed(title=displayname + "(@" + username + ")", color=0xff0000)
      embed.add_field(name="Join Date", value=joindate, inline=True)
