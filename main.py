@@ -32,7 +32,7 @@ async def on_ready():
 #Commands
 @bot.command()
 async def hello(ctx):
-    await ctx.send("Hello!")
+    await ctx.send("bye bye")
 
 @bot.command()
 async def whois(ctx, username):
