@@ -42,14 +42,14 @@ async def whois(ctx, username):
      joindate = user.created.date()
      isbanned = user.is_banned
      description = user.description
-     hasplayedutr = bool(await user.get_badge_awarded_dates([2127151760]))
+     #hasplayedutr = bool(await user.get_badge_awarded_dates([2127151760]))
      followers = await user.get_follower_count()
      embed=discord.Embed(title=displayname + "(@" + username + ")", color=0xff0000)
      embed.add_field(name="Join Date", value=joindate, inline=True)
      embed.add_field(name="Banned", value=isbanned, inline=True)
      embed.add_field(name="Followers", value=followers, inline=True)
      embed.add_field(name="Description", value=description, inline=True)
-     embed.set_footer(text="Played UTR: " + str(hasplayedutr))
+     #embed.set_footer(text="Played UTR: " + str(hasplayedutr))
      await ctx.send(embed=embed)
 @bot.command()
 async def getspecificstat(ctx, id, itemtype):
