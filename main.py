@@ -5,8 +5,8 @@ from discord.ext import commands
 from discord import app_commands
 from dotenv import find_dotenv, load_dotenv
 from ast import literal_eval
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
+#from pymongo.mongo_client import MongoClient
+#from pymongo.server_api import ServerApi
 
 import rblxopencloud
 import os
@@ -22,13 +22,13 @@ game = rblxopencloud.Experience(3498834789, os.getenv("ApiKey"))
 
 uri = os.getenv("uri")
 # Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
+#client = MongoClient(uri, server_api=ServerApi('1'))
 # Send a ping to confirm a successful connection
-try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
+#try:
+#    client.admin.command('ping')
+#    print("Pinged your deployment. You successfully connected to MongoDB!")
+#except Exception as e:
+#    print(e)
 
 datastore = game.get_data_store("DataStore")
 bot = commands.Bot(command_prefix="R!", intents=discord.Intents.all())
